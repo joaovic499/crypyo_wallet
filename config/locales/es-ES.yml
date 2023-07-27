@@ -1,0 +1,8 @@
+es-ES:
+  links:
+    edit: "Corregir"
+    show: "Mostrar"
+    delete: "Suprimir"
+    back: "Voltear"
+    new_coin: "Nueva Moneda"
+    back_coin: "Volver a las Monedas"

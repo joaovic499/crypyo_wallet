@@ -223,6 +223,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  i18n
   importmap-rails
   jbuilder
   pry-rails

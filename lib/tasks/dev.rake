@@ -7,8 +7,9 @@ namespace :dev do
       show_spinner("Apagando BD...") { %x(rails db:drop)} 
       show_spinner("Criando BD...") { %x(rails db:create)} 
       show_spinner("Migrando BD...") { %x(rails db:migrate)} 
+      %x(rails dev:add_mining_types)
       %x(rails dev:add_coins) 
-      %x(rails dev:add_mining_types)     
+          
   else
     puts "Você não esta em ambiente de desenvolvimento!"
 
@@ -23,18 +24,22 @@ task add_coins: :environment do
             description: "Ethereum",
             acronym: "ETH",
             url_image: "https://cryptologos.cc/logos/ethereum-eth-logo.png",
-        },
+            mining_type: MiningType.find_by(acronym: "PoW")
+       },
         {
             description: "Dash",
             acronym: "DASH",
             url_image: "https://s2.coinmarketcap.com/static/img/coins/200x200/131.png",
+            mining_type: MiningType.all.sample
         },
         {
             description: "Bitcoin",
             acronym: "BTC",
             url_image: "https://cryptologos.cc/logos/bitcoin-btc-logo.png",
+            mining_type: MiningType.all.sample
         },
     ]
+
 
 coins.each do |coin|
     Coin.find_or_create_by!(coin)

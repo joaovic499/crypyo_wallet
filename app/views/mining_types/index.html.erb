@@ -6,10 +6,10 @@
   <% @mining_types.each do |mining_type| %>
     <%= render mining_type %>
     <p>
-      <%= link_to "Mostrar", mining_type %>
+      <%= link_to t('links.show'), mining_type %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "Novo Tipo de Moeda", new_mining_type_path %>
+<%= link_to t('links.new_coin'), new_mining_type_path %>
 <p> <%= link_to "Menu", '/welcome/index' %>

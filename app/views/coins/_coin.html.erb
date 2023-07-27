@@ -1,16 +1,16 @@
 <div id="<%= dom_id coin %>">
   <p>
-    <strong>Descrição:</strong>
+    <strong> <%= I18n.t('activerecord.attributes.coin.description') %> </strong>
     <%= coin.description %>
   </p>
 
   <p>
-    <strong>Sigla:</strong>
+    <strong> <%= I18n.t('activerecord.attributes.coin.acronym') %> </strong>
     <%= coin.acronym %>
   </p>
 
   <p>
-    <strong>Url image:</strong>
+    <strong> <%= I18n.t('activerecord.attributes.coin.url_image') %> </strong>
     <%= image_tag coin.url_image, width: 25, height: 25 %>
   </p>
 

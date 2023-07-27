@@ -1,5 +1,15 @@
 <h1>Seja Bem-Vindo</h1>
-<p>Data : <%= data_br(Date.today) %> </p>
+<p>
+    <%= link_to 'Portugues', root_path(locale: 'pt-BR') %>
+</p>
+<p>
+    <%= link_to 'Ingles', root_path(locale: 'en') %>
+</p>
+<p>
+    <%= link_to 'Espanhol', root_path(locale: 'es-ES') %>
+</p>
+<p>Data : <%= t(Date.today) %> </p>
+<P> A linguagem da página está em <strong> <%= default_locale %> </strong>
 
 <%= render "menu" %>
 

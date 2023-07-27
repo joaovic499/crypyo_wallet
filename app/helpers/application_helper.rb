@@ -1,8 +1,4 @@
 module ApplicationHelper
-    def data_br(data_us)
-        data_us.strftime("%d/%m/%Y")
-    end
-end
 
 def ambiente_rails
     if Rails.env.development?
@@ -12,5 +8,7 @@ def ambiente_rails
 
     else
         "Teste"
+    
+        end
     end
 end
